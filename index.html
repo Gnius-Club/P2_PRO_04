@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Sesión 4: ¡Entrega Final (Prototipo Rápido)! – Últimos Toques y Envío Digital</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .header { background-color: #ffa500; color: white; text-align: center; padding: 10px; } /* Orange Accent */
+        .activity { margin-bottom: 20px; }
+        .banner {
+            background-color: #ffa500; /* Orange Accent */
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: bold;
+            list-style: none;
+            display: block;
+        }
+        .content { display: none; padding: 10px; border: 1px solid #ddd; margin-bottom: 10px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+        span[style*="color: red;"] {
+            font-weight: bold;
+        }
+         ul, ol {
+            margin-top: 0;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .time-title { margin-bottom: 20px; text-align: center; font-size: 1.2em; color: #555;}
+
+        summary {
+           display: block;
+           list-style: none;
+        }
+        summary::-webkit-details-marker {
+           display: none;
+        }
+
+    </style>
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content) {
+                if (content.style.display === "none" || content.style.display === "") {
+                    content.style.display = "block";
+                } else {
+                    content.style.display = "none";
+                }
+            }
+        }
+
+        window.onload = () => {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Playbook - Sesión 4: ¡Entrega Final (Prototipo Rápido)! – Últimos Toques y Envío Digital</h1>
+    </div>
+    <div class="container">
+        <h2 class="time-title">Tiempo efectivo de clase: 40 minutos</h2>
+
+        <!-- Resumen de Sesión -->
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('activity_0_content')">
+                <div class="title">📝 Resumen de Sesión</div>
+            </div>
+            <div id="activity_0_content" class="content">
+                <table>
+                    <tr>
+                        <td style="width: 50%; padding: 10px; border-right: 1px solid #ddd;">
+                            <strong>🎯 Objetivo de la Sesión:</strong>
+                            <ul>
+                                <li>Realizar ajustes finales al Prototipo Funcional Básico (PFB).</li>
+                                <li>Verificar el funcionamiento completo del PFB según lo definido.</li>
+                                <li>Preparar el proyecto Scratch para la entrega final al profesor.</li>
+                            </ul>
+                            <strong>⏱️ Duración Estimada:</strong> 40 minutos.
+                        </td>
+                        <td style="width: 50%; padding: 10px;">
+                            <strong>🔑 Entregable Clave:</strong>
+                            <ul>
+                                <li>Archivo final del proyecto Scratch (.sb3) guardado con nombre claro.</li>
+                                <li>Prototipo funcional básico verificado y funcionando como se esperaba.</li>
+                                <li>Proyecto entregado al profesor según las instrucciones.</li>
+                                <li>Tablero Kanban finalizado (tareas del PFB en "¡Listo!").</li>
+                            </ul>
+                             <strong>🛠️ Materiales/Preparación:</strong>
+                            <ul>
+                                <li>Dispositivos con acceso a Scratch y los proyectos casi finalizados.</li>
+                                <li>Tablero Kanban de cada equipo actualizado desde Sesión 3.</li>
+                                <li>Definición del PFB de cada equipo.</li>
+                                <li>Instrucciones claras sobre cómo entregar el archivo final (ej. carpeta compartida, plataforma educativa, USB).</li>
+                                <li>Proyector o pantalla.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Desarrollo de la Sesión -->
+
+        <!-- Actividad 1: ¡Recta Final! Saludo y Meta de Entrega -->
+        <div id="activity-1" class="activity">
+             <div class="banner" onclick="toggleContent('activity_1_content')">
+                <div class="title">🏁 Actividad 1: ¡Recta Final! Saludo y Meta de Entrega ⏰ Tiempo: 2 minutos</div>
+             </div>
+            <div id="activity_1_content" class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 50%;">Acción</th>
+                            <th style="width: 50%;">Diálogo del Maestro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Paso 1 (2 min):</strong> Saludar con energía, enfocar en la meta final de entrega del prototipo rápido.
+                                (<strong>Proyectar Diapositiva 1:</strong> Título "Sesión 4: ¡Entrega Final!" y Objetivo: "¡Últimos toques y envío de nuestro Prototipo!").
+                            </td>
+                            <td>
+                                "¡Genios! ¡Llegó el gran día! ¡Hoy es la Sesión 4, la recta final de nuestro Prototipo Rápido! 🚀 Vamos a darle los últimos toques mágicos a nuestro Arte Interactivo ODS y a prepararlo para la entrega. ¡Hoy nuestro proyecto cruza la meta!"
+                                <br><br>
+                                "¿Están listos para el último empujón y para mostrar el increíble trabajo que han hecho?"
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 2: ¡Puesta a Punto Final! Ajustes y Verificación -->
+        <div id="activity-2" class="activity">
+             <div class="banner" onclick="toggleContent('activity_2_content')">
+                 <div class="title">🔧 Actividad 2: ¡Puesta a Punto Final! Ajustes y Verificación ⏰ Tiempo: 33 minutos</div>
+             </div>
+            <div id="activity_2_content" class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 50%;">Acción</th>
+                            <th style="width: 50%;">Diálogo del Maestro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Paso 1 (10 min):</strong> Facilitar corrección de últimos bugs menores identificados en Sesión 3 o en una revisión rápida inicial.
+                                (<strong>Proyectar Diapositiva 2:</strong> Título "Corrección de Última Hora 🐞" con iconos de lupa y herramientas). Equipos trabajan en sus dispositivos.
+                            </td>
+                            <td>
+                                "¡Primero, aseguremos que todo esté en orden! Si quedó algún pequeño 'bug' de la sesión pasada, o si ven algún detallito ahora, ¡es el momento de arreglarlo!"
+                                <br><br>
+                                "Programadores/as, con ayuda del Tester y Arquitecto/a, ¡a la caza de esos últimos bichitos! Que nuestro código quede limpio."
+                                <br><br>
+                                <em>(Circular y apoyar en la identificación y corrección de errores menores).</em>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Paso 2 (10 min):</strong> Guiar el pulido visual/sonoro: ajustar apariencia de sprites/fondos, verificar volúmenes de sonido (si aplica).
+                                (<strong>Proyectar Diapositiva 3:</strong> Título "Pulido Visual y Sonoro ✨🔊" con iconos de paleta de colores y nota musical). Equipos trabajan en sus dispositivos.
+                            </td>
+                            <td>
+                                "¡Ahora, démosle brillo a nuestro proyecto! ✨ Que se vea y se sienta genial."
+                                <br><br>
+                                "Revisen la apariencia: ¿Los personajes y fondos se ven bien? ¿Están alineados como querían? ¿Los colores son los correctos?"
+                                <br><br>
+                                "Si tienen sonidos: ¿El volumen está bien? ¿Suenan en el momento justo?"
+                                <br><br>
+                                "¡Pequeños ajustes que hacen una gran diferencia! Testers y Arquitectos/as, ayuden a decidir qué necesita un toque final."
+                                <br><br>
+                                <em>(Circular, ofrecer sugerencias estéticas o funcionales menores. Recordar el PFB como foco).</em>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>
+                                <strong>Paso 3 (10 min):</strong> Conducir la verificación funcional final del PFB. El equipo completo prueba la interacción principal definida.
+                                (<strong>Proyectar Diapositiva 4:</strong> Título "¡Verificación Final del Corazón! ✅" con icono de checklist grande).
+                            </td>
+                            <td>
+                                "¡Momento de la verdad! ¡Vamos a probar juntos una última vez que el corazón de nuestro proyecto late como debe!"
+                                <br><br>
+                                "Abran su proyecto. TODO el equipo, prueben esa interacción principal que definieron como su Prototipo Funcional Básico. Por ejemplo, si era 'Al hacer clic en la tortuga, dice ¡Cuidemos el mar!', ¡hagan clic en la tortuga!"
+                                <br><br>
+                                "Pregunta clave: <strong>¿Funciona exactamente como esperábamos?</strong>"
+                                <br><br>
+                                "¡Asegúrense de que esa función principal esté perfecta!"
+                                <br><br>
+                                <em>(Observar a los equipos realizando la prueba final. Ayudar a resolver cualquier problema crítico encontrado EN EL PFB).</em>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>
+                                <strong>Paso 4 (3 min):</strong> Mover las últimas tareas menores relacionadas con el PFB (si las hubiera) a "¡Listo!" en el Kanban. Facilitador apoya con dudas técnicas finales.
+                            </td>
+                            <td>
+                                "Si la verificación fue exitosa y corrigieron los últimos detalles, ¡es hora de actualizar el Kanban!"
+                                <br><br>
+                                "Arquitectos/as, muevan esas últimas tareas relacionadas con su PFB a la columna '¡Listo! (✅)'."
+                                <br><br>
+                                "¿Alguien tiene alguna última duda técnica rápida antes de preparar la entrega?"
+                                <br><br>
+                                <em>(Resolver dudas finales rápidas).</em>
+                                "¡Su prototipo está funcional y listo!"
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 3: ¡Listo para Enviar! Preparación para Entrega -->
+        <div id="activity-3" class="activity">
+            <div class="banner" onclick="toggleContent('activity_3_content')">
+                <div class="title">📦 Actividad 3: ¡Listo para Enviar! Preparación para Entrega ⏰ Tiempo: 5 minutos</div>
+            </div>
+            <div id="activity_3_content" class="content">
+                 <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 50%;">Acción</th>
+                            <th style="width: 50%;">Diálogo del Maestro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Paso 1 (2 min):</strong> Guiar el guardado final del proyecto Scratch con nombre claro. Dar ejemplo de nomenclatura.
+                                (<strong>Proyectar Diapositiva 5:</strong> Título "¡Guardado Final! 💾" con instrucción clara de nomenclatura, ej: Equipo_Nombre_ODSXX_PrototipoBasico.sb3).
+                            </td>
+                            <td>
+                                "¡Excelente! Ahora, el paso crucial: ¡Guardar nuestro tesoro digital!"
+                                <br><br>
+                                "Vayan a 'Archivo' -> 'Guardar en tu ordenador' (o como aplique en su versión de Scratch)."
+                                <br><br>
+                                "¡Muy importante el nombre! Guárdenlo así: <strong>[NombreDeSuEquipo]_[ODSQueTrabajaron]_PrototipoBasico.sb3</strong>. Por ejemplo: 'Equipo_Aguilas_ODS14_PrototipoBasico.sb3'."
+                                <br><br>
+                                "¡Asegúrense de guardarlo bien!"
+                                <br><br>
+                                <em>(Verificar que los equipos realizan el guardado con el nombre correcto).</em>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>
+                                <strong>Paso 2 (1 min):</strong> Dar instrucciones claras sobre CÓMO entregar el archivo (según lo planeado por el facilitador: subir a carpeta, enviar por plataforma, mostrar en equipo, etc.).
+                                (<strong>Proyectar Diapositiva 6:</strong> Título "Instrucciones de Entrega 📨" con los pasos específicos para la entrega en ESTA clase/escuela).
+                            </td>
+                            <td>
+                                "¡Perfecto! Ya tienen su archivo .sb3 guardado. Ahora, ¿cómo me lo van a entregar?"
+                                <br><br>
+                                <em>(Dar aquí las instrucciones específicas: "Por favor, suban su archivo a la carpeta 'Entregas Prototipo' en nuestro Google Drive / Envíen el archivo a través de la tarea en [Plataforma Educativa] / Preparen su pantalla para mostrármelo ahora mismo...", etc.).</em>
+                                <br><br>
+                                "¿Alguna duda sobre cómo entregar?"
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>
+                                <strong>Paso 3 (1 min):</strong> Mover una tarjeta simbólica "Preparar Entrega Rápida" a "¡Listo!" en el Kanban.
+                                (<strong>Proyectar Diapositiva 7:</strong> Imagen del Kanban con una tarjeta simbólica "Preparar Entrega Rápida" siendo movida a la columna "¡Listo!").
+                            </td>
+                            <td>
+                                "¡Y para marcar este gran paso en nuestro Kanban! Arquitectos/as, muevan esa tarjeta simbólica de 'Preparar Entrega Rápida' a la columna de '¡Listo! (✅)'."
+                                <br><br>
+                                "¡Hemos completado el ciclo!"
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>
+                                <strong>Paso 4 (1 min):</strong> Cierre final y reconocimiento del esfuerzo y logro del equipo.
+                                (<strong>Proyectar Diapositiva 8:</strong> Título "¡MISIÓN CUMPLIDA! 🎉" con confeti, estrellas o un trofeo).
+                            </td>
+                            <td>
+                                "¡¡¡EQUIPOS, LO HAN LOGRADO!!! ¡Felicitaciones!"
+                                <br><br>
+                                "¡Han trabajado increíblemente estas 4 sesiones! Han planificado, programado, probado y corregido para crear un Prototipo Funcional Básico de su Arte Interactivo ODS."
+                                <br><br>
+                                "¡Siéntanse súper orgullosos de lo que han construido! ¡Este es un gran paso en su camino como creadores digitales que buscan un mundo mejor!"
+                                <br><br>
+                                "¡Gran trabajo, Genios!"
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div> <!-- Fin del container -->
+</body>
+</html>
