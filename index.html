@@ -14,12 +14,21 @@
             color: white;
             padding: 10px;
             cursor: pointer;
-            margin-bottom: 10px;
+            margin-bottom: 10px; /* Adjusted for spacing */
             font-weight: bold;
             list-style: none;
             display: block;
+            border-radius: 5px; /* Rounded corners for banner */
         }
-        .content { display: none; padding: 10px; border: 1px solid #ddd; margin-bottom: 10px; }
+        .content { 
+            display: none; 
+            padding: 15px; 
+            border: 1px solid #ddd; 
+            margin-bottom: 10px; 
+            border-radius: 5px; /* Rounded corners for content */
+            margin-top: -10px; /* Visual connection with banner */
+            padding-top: 20px; /* Avoid text clash */
+        }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -43,13 +52,16 @@
         }
         .time-title { margin-bottom: 20px; text-align: center; font-size: 1.2em; color: #555;}
 
-        summary {
-           display: block;
-           list-style: none;
+        /* Making facilitator instructions clearer */
+        td em, td i { /* Style for italicized facilitator notes */
+            color: #555;
+            font-style: italic;
+            display: block; /* Put notes on new lines */
+            margin-top: 5px;
         }
-        summary::-webkit-details-marker {
-           display: none;
-        }
+        /* Ensure step <strong> tags render bold */
+        td strong { font-weight: bold; } /* General strong for keywords */
+        td > strong { display: block; margin-bottom: 5px; } /* For step headers */
 
     </style>
     <script>
@@ -69,6 +81,11 @@
             contents.forEach(content => {
                 content.style.display = 'none';
             });
+            // Open "Resumen de Sesión" by default
+            const resumenContent = document.getElementById('activity_0_content');
+            if (resumenContent) {
+                resumenContent.style.display = 'block';
+            }
         };
     </script>
 </head>
@@ -84,7 +101,7 @@
             <div class="banner" onclick="toggleContent('activity_0_content')">
                 <div class="title">📝 Resumen de Sesión</div>
             </div>
-            <div id="activity_0_content" class="content">
+            <div id="activity_0_content" class="content" style="display: block;">
                 <table>
                     <tr>
                         <td style="width: 50%; padding: 10px; border-right: 1px solid #ddd;">
@@ -136,8 +153,11 @@
                     <tbody>
                         <tr>
                             <td>
-                                <strong>Paso 1 (2 min):</strong> Saludar con energía, enfocar en la meta final de entrega del prototipo rápido.
-                                (<strong>Proyectar Diapositiva 1:</strong> Título "Sesión 4: ¡Entrega Final!" y Objetivo: "¡Últimos toques y envío de nuestro Prototipo!").
+                                <strong>Paso 1 (2 min):</strong>
+                                <ul>
+                                    <li>Saludar con energía, enfocar en la meta final de entrega del prototipo rápido.</li>
+                                    <li><strong>Proyectar Diapositiva 1</strong>.</li>
+                                </ul>
                             </td>
                             <td>
                                 "¡Genios! ¡Llegó el gran día! ¡Hoy es la Sesión 4, la recta final de nuestro Prototipo Rápido! 🚀 Vamos a darle los últimos toques mágicos a nuestro Arte Interactivo ODS y a prepararlo para la entrega. ¡Hoy nuestro proyecto cruza la meta!"
@@ -166,8 +186,12 @@
                     <tbody>
                         <tr>
                             <td>
-                                <strong>Paso 1 (10 min):</strong> Facilitar corrección de últimos bugs menores identificados en Sesión 3 o en una revisión rápida inicial.
-                                (<strong>Proyectar Diapositiva 2:</strong> Título "Corrección de Última Hora 🐞" con iconos de lupa y herramientas). Equipos trabajan en sus dispositivos.
+                                <strong>Paso 1 (10 min):</strong>
+                                <ul>
+                                    <li>Facilitar corrección de últimos bugs menores identificados en Sesión 3 o en una revisión rápida inicial.</li>
+                                    <li><strong>Proyectar Diapositiva 2</strong>.</li>
+                                    <li>Equipos trabajan en sus dispositivos.</li>
+                                </ul>
                             </td>
                             <td>
                                 "¡Primero, aseguremos que todo esté en orden! Si quedó algún pequeño 'bug' de la sesión pasada, o si ven algún detallito ahora, ¡es el momento de arreglarlo!"
@@ -179,8 +203,12 @@
                         </tr>
                         <tr>
                             <td>
-                                <strong>Paso 2 (10 min):</strong> Guiar el pulido visual/sonoro: ajustar apariencia de sprites/fondos, verificar volúmenes de sonido (si aplica).
-                                (<strong>Proyectar Diapositiva 3:</strong> Título "Pulido Visual y Sonoro ✨🔊" con iconos de paleta de colores y nota musical). Equipos trabajan en sus dispositivos.
+                                <strong>Paso 2 (10 min):</strong>
+                                <ul>
+                                    <li>Guiar el pulido visual/sonoro: ajustar apariencia de sprites/fondos, verificar volúmenes de sonido.</li>
+                                    <li><strong>Proyectar Diapositiva 3</strong>.</li>
+                                    <li>Equipos trabajan en sus dispositivos.</li>
+                                </ul>
                             </td>
                             <td>
                                 "¡Ahora, démosle brillo a nuestro proyecto! ✨ Que se vea y se sienta genial."
@@ -196,8 +224,11 @@
                         </tr>
                          <tr>
                             <td>
-                                <strong>Paso 3 (10 min):</strong> Conducir la verificación funcional final del PFB. El equipo completo prueba la interacción principal definida.
-                                (<strong>Proyectar Diapositiva 4:</strong> Título "¡Verificación Final del Corazón! ✅" con icono de checklist grande).
+                                <strong>Paso 3 (10 min):</strong>
+                                <ul>
+                                    <li>Conducir la verificación funcional final del PFB. El equipo completo prueba la interacción principal definida.</li>
+                                    <li><strong>Proyectar Diapositiva 4</strong>.</li>
+                                </ul>
                             </td>
                             <td>
                                 "¡Momento de la verdad! ¡Vamos a probar juntos una última vez que el corazón de nuestro proyecto late como debe!"
@@ -213,7 +244,11 @@
                         </tr>
                          <tr>
                             <td>
-                                <strong>Paso 4 (3 min):</strong> Mover las últimas tareas menores relacionadas con el PFB (si las hubiera) a "¡Listo!" en el Kanban. Facilitador apoya con dudas técnicas finales.
+                                <strong>Paso 4 (3 min):</strong>
+                                <ul>
+                                    <li>Mover las últimas tareas menores relacionadas con el PFB (si las hubiera) a "¡Listo!" en el Kanban.</li>
+                                    <li>Facilitador apoya con dudas técnicas finales.</li>
+                                </ul>
                             </td>
                             <td>
                                 "Si la verificación fue exitosa y corrigieron los últimos detalles, ¡es hora de actualizar el Kanban!"
@@ -247,8 +282,11 @@
                     <tbody>
                         <tr>
                             <td>
-                                <strong>Paso 1 (2 min):</strong> Guiar el guardado final del proyecto Scratch con nombre claro. Dar ejemplo de nomenclatura.
-                                (<strong>Proyectar Diapositiva 5:</strong> Título "¡Guardado Final! 💾" con instrucción clara de nomenclatura, ej: Equipo_Nombre_ODSXX_PrototipoBasico.sb3).
+                                <strong>Paso 1 (2 min):</strong>
+                                <ul>
+                                    <li>Guiar el guardado final del proyecto Scratch con nombre claro. Dar ejemplo de nomenclatura.</li>
+                                    <li><strong>Proyectar Diapositiva 5</strong>.</li>
+                                </ul>
                             </td>
                             <td>
                                 "¡Excelente! Ahora, el paso crucial: ¡Guardar nuestro tesoro digital!"
@@ -264,8 +302,11 @@
                         </tr>
                          <tr>
                             <td>
-                                <strong>Paso 2 (1 min):</strong> Dar instrucciones claras sobre CÓMO entregar el archivo (según lo planeado por el facilitador: subir a carpeta, enviar por plataforma, mostrar en equipo, etc.).
-                                (<strong>Proyectar Diapositiva 6:</strong> Título "Instrucciones de Entrega 📨" con los pasos específicos para la entrega en ESTA clase/escuela).
+                                <strong>Paso 2 (1 min):</strong>
+                                <ul>
+                                    <li>Dar instrucciones claras sobre CÓMO entregar el archivo.</li>
+                                    <li><strong>Proyectar Diapositiva 6</strong>.</li>
+                                </ul>
                             </td>
                             <td>
                                 "¡Perfecto! Ya tienen su archivo .sb3 guardado. Ahora, ¿cómo me lo van a entregar?"
@@ -277,8 +318,11 @@
                         </tr>
                          <tr>
                             <td>
-                                <strong>Paso 3 (1 min):</strong> Mover una tarjeta simbólica "Preparar Entrega Rápida" a "¡Listo!" en el Kanban.
-                                (<strong>Proyectar Diapositiva 7:</strong> Imagen del Kanban con una tarjeta simbólica "Preparar Entrega Rápida" siendo movida a la columna "¡Listo!").
+                                <strong>Paso 3 (1 min):</strong>
+                                <ul>
+                                    <li>Mover una tarjeta simbólica "Preparar Entrega Rápida" a "¡Listo!" en el Kanban.</li>
+                                    <li><strong>Proyectar Diapositiva 7</strong>.</li>
+                                </ul>
                             </td>
                             <td>
                                 "¡Y para marcar este gran paso en nuestro Kanban! Arquitectos/as, muevan esa tarjeta simbólica de 'Preparar Entrega Rápida' a la columna de '¡Listo! (✅)'."
@@ -288,8 +332,11 @@
                         </tr>
                          <tr>
                             <td>
-                                <strong>Paso 4 (1 min):</strong> Cierre final y reconocimiento del esfuerzo y logro del equipo.
-                                (<strong>Proyectar Diapositiva 8:</strong> Título "¡MISIÓN CUMPLIDA! 🎉" con confeti, estrellas o un trofeo).
+                                <strong>Paso 4 (1 min):</strong>
+                                <ul>
+                                    <li>Cierre final y reconocimiento del esfuerzo y logro del equipo.</li>
+                                    <li><strong>Proyectar Diapositiva 8</strong>.</li>
+                                </ul>
                             </td>
                             <td>
                                 "¡¡¡EQUIPOS, LO HAN LOGRADO!!! ¡Felicitaciones!"
